@@ -1,0 +1,15 @@
+.searchBox{
+  /* width: 100%; */
+  height: 90rpx;
+  background-color: var(--themeColor);
+  padding: 10rpx;
+}
+.searchBtn{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  border-radius: 15rpx;
+}
