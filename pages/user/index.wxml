@@ -1,2 +1,78 @@
-<!--pages/user/index.wxml-->
-<text>pages/user/index.wxml</text>
+<view class="avatarContainer">
+    <block wx:if="{{userInfo}}">
+        <image class="avatarB" src="/icons/avatar.jpg"></image>
+        <view class="avatarS">
+            <image src="/icons/avatar.jpg"></image>
+            <view>Super远仔</view>
+        </view>
+    </block>
+    <navigator wx:else url="/pages/login/index">登录</navigator>
+</view>
+
+<view class="outContainer">
+    <view class="userContent">
+        <view class="collectContainer">
+            <navigator>
+                <view class="collectNum">0</view>
+                <view>收藏的店铺</view>
+            </navigator>
+            <navigator>
+                <view class="collectNum">0</view>
+                <view>收藏的商品</view>
+            </navigator>
+            <navigator>
+                <view class="collectNum">0</view>
+                <view>关注的商品</view>
+            </navigator>
+            <navigator>
+                <view class="collectNum">0</view>
+                <view>我的足迹</view>
+            </navigator>
+        </view>
+        <view class="orderContainer">
+            <view class="myOrder">我的订单</view>
+            <view class="orderList">
+                <navigator url="/pages/order/index?type=0">
+                    <view class="iconfont icon-ding_dan"></view>
+                    <view>全部订单</view>
+                </navigator>
+                <navigator url="/pages/order/index?type=1">
+                    <view class="iconfont icon-ding_dan"></view>
+                    <view>待付款</view>
+                </navigator>
+                <navigator url="/pages/order/index?type=2">
+                    <view class="iconfont icon-receipt-address"></view>
+                    <view>待收货</view>
+                </navigator>
+                <navigator>
+                    <view class="iconfont icon-tuihuotuikuan_dianpu"></view>
+                    <view>退货/退款</view>
+                </navigator>
+            </view>
+        </view>
+        <view class="single_item">
+            <view>收货地址管理</view>
+            <view>></view>
+        </view>
+        <view class="user_help">
+            <view class="help_item">
+                <text>联系客服</text>
+                <text>400-618-4000</text>
+            </view>
+            <view class="help_item">
+                <view>意见反馈</view>
+                <view>></view>
+            </view>
+            <view class="help_item">
+                <view>关于我们</view>
+                <view>></view>
+            </view>
+        </view>
+        <view class="single_item">
+           <view>把应用推荐给其他人</view>
+           <view>></view>
+        </view>
+    </view>
+</view>
+
+

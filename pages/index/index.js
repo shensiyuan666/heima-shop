@@ -1,30 +1,36 @@
-// index.js
-// 获取应用实例
-const app = getApp()
-
 import  {request} from '../../request/index.js'
+import regeneratorRuntime from '../../lib/runtime/runtime';
+
 Page({
   data: {
-      swiperList:[]
+      swiperList:[],
+      cateList:[],
+      floorList:[]
   },
-  // 事件处理函数
-  onLoad() {
-    // wx.request({
-    //   url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata', 
-    //   success: (res)=> {
-    //     console.log(res.data)
-    //     this.setData({
-    //       swiperList:res.data.message
-    //     })
-    //   }
-    // })
 
-    request({url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata'})
-    .then((res)=>{
-      console.log(res.data);
-      this.setData({
-          swiperList:res.data.message
-      })
+  onLoad() {
+    this.getSwiperList()
+    this.getCateList()
+    this.getfloorList()
+  },
+  async getSwiperList(){
+    const res=await request({url: '/home/swiperdata'})
+    this.setData({
+      swiperList:res
+    })
+  },
+
+  async getCateList(){
+    const res=await request({url: '/home/catitems'})
+    this.setData({
+      cateList:res
+    })
+  },
+
+  async getfloorList(){
+    const res=await request({url: '/home/floordata'})
+    this.setData({
+      floorList:res
     })
   }
 })

@@ -1,1 +1,29 @@
-/* pages/goods_list/index.wxss */
+.goods_item{
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 2rpx solid #ccc;
+}
+.goods_item .goods_image{
+  flex:1;
+}
+.goods_item .goods_intro{
+  flex:2;
+}
+
+.goods_item .goods_image image{
+  width: 100%;
+}
+
+.goods_item .goods_intro{
+  margin-left: 50rpx;
+}
+
+.goods_item .goods_intro .goods_title{
+  margin-bottom: 30rpx;
+}
+
+.goods_item .goods_intro .goods_price{
+  color:var(--themeColor);
+  font-size:40rpx;
+}

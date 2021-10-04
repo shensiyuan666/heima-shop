@@ -1,2 +1,50 @@
-<!--pages/pay/index.wxml-->
-<text>pages/pay/index.wxml</text>
+<view class="addressContainer">
+    <view wx:if="{{!address.userName}}">
+        <button bindtap="getAddress">+ 添加收货地址</button>
+    </view>
+    <view class="address_info" wx:else>
+        <view>
+            <view>收货人：{{address.userName}}</view>
+            <view>{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}</view>
+        </view>
+        <view>
+            <view>{{address.telNumber}}</view>
+            <!-- <view class="changeAddress" bindtap="changeAddress">修改地址</view> -->
+        </view>
+    </view>
+</view>
+
+<view class="cartContainer">
+    <view class="cart_title">购物车</view>
+    <block wx:if="{{cart.length}}">
+      <view class="goods_list" wx:for="{{cart}}" wx:key="cat_id">
+        <view class="goods_item">
+            <navigator class="goods_image" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+                <image mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg'}}"></image>
+            </navigator>
+            <view class="goods_intro">
+                <view class="goods_title">{{item.goods_name}}</view>
+                <view class="goods_calculate">
+                    <view class="goods_price">￥{{item.goods_price}}</view>
+                    <view class="goods_amount">
+                        <view>x{{item.num}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <image mode="widthFix" src="http://hbimg.b0.upaiyun.com/e1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658" ></image>
+    </block>
+</view>
+
+<view class="totalPrice">
+    <view>合计：</view>
+    <view>
+        <view class="price">￥{{totalPrice}}</view>
+        <view class="fee">包含运费</view>
+    </view>
+    <view class="payment" bindtap="handleOrderPay">支付（{{totalNum}}）</view>
+</view>
+

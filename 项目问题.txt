@@ -1,0 +1,6 @@
+小程序不支持es7语法，使用es7的async await语法需要引入Facebook的runtime.js包
+
+首页 index
+问题：伪类选择器nth:child失效
+解决方案：使用行内样式表
+

@@ -1,1 +1,107 @@
-/* pages/user/index.wxss */
+page{
+  background-color: #edece8;
+}
+.avatarContainer{
+  position: relative;
+  width: 100%;
+  height: 450rpx;
+  /* background-color: #666; */
+}
+.avatarContainer .avatarB{
+  width: 100%;
+  filter: blur(5rpx);
+}
+.avatarContainer .avatarS{
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top:20%;
+  text-align: center;
+}
+.avatarContainer .avatarS image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.avatarContainer .avatarS view{
+  padding-top: 40rpx;
+  font-size: 40rpx;
+  color: #fff;
+}
+.avatarContainer navigator{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  color: greenyellow;
+  font-size: 40rpx;
+  border: 5rpx solid greenyellow;
+  border-radius: 10rpx;
+  padding: 20rpx;
+}
+.outContainer{
+  position: relative;
+}
+.userContent{
+  position: absolute;
+  width: 90%;
+  left:50%;
+  transform: translateX(-50%);
+  top:-40rpx;
+  padding-bottom: 100rpx;
+  color: #666;
+}
+.collectContainer{
+  display: flex;
+  background-color: #fff;
+  padding: 10rpx 0;
+}
+.collectContainer navigator{
+  flex: 1;
+  text-align: center;
+}
+.collectContainer navigator .collectNum{
+  color: var(--themeColor);
+}
+.orderContainer{
+  margin-top: 30rpx;
+  background-color: #fff;
+}
+.orderContainer .myOrder{
+  border-bottom: 1rpx solid #ccc;
+  padding: 20rpx;
+}
+.orderContainer .orderList{
+  display: flex;
+  padding: 20rpx 0;
+}
+.orderContainer .orderList navigator{
+  flex: 1;
+  text-align: center;
+}
+.orderContainer .orderList navigator .iconfont{
+  color: var(--themeColor);
+  font-size: 40rpx;
+}
+.single_item{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding: 20rpx;
+}
+.user_help{
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.user_help .help_item{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.recommend{
+  background-color: #fff;
+  padding: 20rpx;
+  margin-top: 20rpx;
+}

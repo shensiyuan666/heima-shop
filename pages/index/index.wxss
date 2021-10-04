@@ -5,4 +5,32 @@
 .swiperBox image{
   width: 100%;
 }
+.cateList{
+  display: flex;
+}
+.cateList navigator{
+  flex:1;
+  padding:20rpx;
+}
+.cateList navigator image{
+  width: 100%;
+}
+
+.floorContainer .floorList .floor_title image{
+  padding: 20rpx 0;
+  width: 100%;
+}
+
+.floorContainer{
+  overflow: hidden;
+}
+.floorContainer .floorList .product_list navigator{
+  float: left;
+  width: 33.33%
+}
+
+.floorContainer .floorList .product_list navigator image{
+  width: 100%;
+  height: 100%;
+}
 

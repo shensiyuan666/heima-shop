@@ -41,7 +41,7 @@
   "compileType": "miniprogram",
   "libVersion": "2.19.2",
   "appid": "wx2f6da33b3b9d1489",
-  "projectname": "%E9%BB%91%E9%A9%AC%E5%95%86%E5%9F%8E",
+  "projectname": "黑马会员优购",
   "debugOptions": {
     "hidedInDevtools": []
   },

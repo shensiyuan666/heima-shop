@@ -1,12 +1,28 @@
-<view>
-    <searchInput></searchInput>
-    <view class="swiperBox">
-        <swiper autoplay circular indicator-dots indicator-active-color="#eb4450">
-            <swiper-item  wx:for="{{swiperList}}" wx:key="goods_id">
-                <navigator url="{{item.navigator_url}}">
-                    <image src="{{item.image_src}}" mode="widthFix"></image>
-                </navigator>
-            </swiper-item>
-        </swiper>
+<searchInput></searchInput>
+<view class="swiperBox">
+    <swiper autoplay circular indicator-dots indicator-active-color="#eb4450">
+        <swiper-item  wx:for="{{swiperList}}" wx:key="goods_id">
+            <navigator url="{{item.navigator_url}}">
+                <image src="{{item.image_src}}" mode="widthFix"></image>
+            </navigator>
+        </swiper-item>
+    </swiper>
+</view>
+<view class="cateList">
+    <navigator wx:for="{{cateList}}" wx:key="name" url="{{item.navigator_url}}" open-type="switchTab">
+        <image mode="widthFix" src="{{item.image_src}}"></image>
+    </navigator>
+</view>
+<view class="floorContainer">
+    <view class="floorList" wx:for="{{floorList}}" wx:for-item="item1" wx:for-index="index1" wx:key="floor_title">
+        <view class="floor_title">
+            <image mode="widthFix" src="{{item1.floor_title.image_src}}"></image>
+        </view>
+        <view class="product_list" wx:for="{{item1.product_list}}" wx:for-item="item2" wx:for-index="index2" wx:key="name">
+            <navigator url="{{item2.navigator_url}}" style="height:{{index2===0?'386rpx':'calc(33.33vw*386/232/2)'}}">
+                <image mode="{{index2===0?'widthFix':'scaleToFill'}}"  src="{{item2.image_src}}"></image>
+            </navigator>
+        </view>
     </view>
 </view>
+

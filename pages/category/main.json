@@ -2,5 +2,5 @@
   "usingComponents": {
     "searchInput":"/components/searchInput/searchInput"
   },
-  "navigationBarTitleText": "黑马会员优购"
+  "navigationBarTitleText": "分类"
 }
